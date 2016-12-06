@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:latest
 WORKDIR /build
 # install tools and dependencies
 RUN apt-get update && \
@@ -36,5 +36,5 @@ RUN git clone https://github.com/ethcore/parity && \
 
 RUN file /build/parity/target/release/parity
 
-EXPOSE 8080 8545 8180
+EXPOSE 8070 8535 8170
 ENTRYPOINT ["/build/parity/target/release/parity"]
